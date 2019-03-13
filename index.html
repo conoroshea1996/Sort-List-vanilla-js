@@ -27,6 +27,7 @@
         </div>
 
         <script>
+            // User input value
             let FilterInput = document.getElementById('filterInput');
              
              //get Inout element 
@@ -38,9 +39,11 @@
                  //Get ul 
                  let ul = document.getElementById('names');
                  //get li's
-                 let li = ul.querySelectorAll('li.collection-item');   
+                 let li = ul.querySelectorAll('li.collection-item'); 
+                 //loop through all li's
                  for(let i =0; i < li.length; i++){
-
+                    
+                   //storing data from li loop
                  let a = li[i].getElementsByTagName("a")[0];
                 // Check if Input value matches 
                 if (a.innerHTML.toUpperCase().indexOf(InputValue) > -1){
@@ -48,6 +51,7 @@
                     li[i].style.display="";
 
                 }
+                // If value doesnt match run this
                 else{
                     li[i].style.display="none";
                 }
